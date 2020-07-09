@@ -1,30 +1,20 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
+import { AddCategory } from "./Components/AddCategory";
 
 export const GifApp = () => {
+  const [categories, setCategories] = useState(["Fun", "Mood", "Love"]);
 
-const [categories, setCategories] = useState(['Perros','Gatos','Hamsters'])
+  return (
+    <div>
+      <h1>Gif App</h1>
+      <AddCategory setCategories={setCategories} />
+      <hr />
 
-
-    const handleAdd = () =>{
-        setCategories([...categories,'Ranas'])
-    } 
-
-    return (
-        <div>
-            <h1>Gif App</h1>
-            <hr/>
-
-           {/* TO DO: Add Component */}
-
-          <ol>
-            {
-                categories.map(category=>{
-                return <li key={category}>{category}</li>
-                })
-            }
-
-          </ol>
-            
-        </div>
-    )
-}
+      <ol>
+        {categories.map(category => {
+          return <li key={category}>{category}</li>;
+        })}
+      </ol>
+    </div>
+  );
+};

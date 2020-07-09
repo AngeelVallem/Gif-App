@@ -7,3 +7,9 @@ body{
   padding: 60px;
   background-color: #282c34;
 }
+input{
+  color: #282c34;
+  width: 99.5%;
+  font-size: 1.1rem;
+
+}
