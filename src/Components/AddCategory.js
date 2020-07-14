@@ -15,7 +15,7 @@ export const AddCategory = ({setCategories}) => {
     
         // Valid  Input
 if(inputValue.trim().length > 2 ){
-    setCategories( cats =>  [...cats, inputValue] )
+    setCategories( cats =>  [inputValue,...cats] )
     setInputValue('')
 }
 
@@ -28,6 +28,7 @@ if(inputValue.trim().length > 2 ){
         name={"category"}
         type="text"
         value={inputValue}
+        placeholder="Search your favorites categories"
         onChange={handleInputValue}
       />
     </form>
