@@ -25,7 +25,7 @@ if(inputValue.trim().length > 2 ){
   return (
     <form onSubmit={handleSubmit}>
       <input
-        name={"category"}
+        name="category"
         type="text"
         value={inputValue}
         placeholder="Search your favorites categories"
